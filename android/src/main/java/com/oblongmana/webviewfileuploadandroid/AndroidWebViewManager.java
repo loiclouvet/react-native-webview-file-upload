@@ -9,12 +9,15 @@ import android.widget.Toast;
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
+import android.webkit.CookieManager;
 import android.webkit.DownloadListener;
 import android.webkit.JsPromptResult;
 import android.webkit.JsResult;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import java.nio.charset.StandardCharsets;
+import java.net.URLDecoder;
 
 
 import com.facebook.react.uimanager.annotations.ReactProp;
@@ -81,7 +84,7 @@ public class AndroidWebViewManager extends ReactWebViewManager {
             public void onDownloadStart(String url, String userAgent,
                     String contentDisposition, String mimetype,
                     long contentLength) {
-                
+
                 DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
 
                 //Try to extract filename from contentDisposition, otherwise guess using URLUtil
