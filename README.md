@@ -1,3 +1,15 @@
+# ⚠ ARCHIVED - Please use react-native-webview
+Over the years, there have been a number of forks of this (and this itself was
+originally a fork of a fork!), and a fair number of similar projects have arisen.
+This repo is no longer maintained - in the years since it was actively worked on,
+WebView has been removed from react-native core, and the community has standardised
+on a community-maintained version, including some of the improvements made by this
+repo (see https://github.com/react-native-webview/react-native-webview/pull/203),
+so Android upload and download should be supported over there.
+
+As such, if you've found this repo in the wild, please use the following instead:
+https://github.com/react-native-webview/react-native-webview
+
 # react-native-webview-file-upload-android
 ReactNative's WebView on Android does not support file input. This library
 adds in an `<AndroidWebView>` that does support file input, as well adding 
